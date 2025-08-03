@@ -1,0 +1,96 @@
+.detail {
+    background-color: $color-quicksand;
+    color: $color-quarter-spanish-white;
+    @extend %cover;
+    @extend %center;
+
+    .detail__wrapper {
+        display: flex;
+        gap: 8.2rem;
+        // align-items: center;
+
+        .detail__media {
+            position: relative;
+            width: 55.4rem;
+            height: 78.2rem;
+
+            .detail__media__image {
+                @extend %cover;
+                object-fit: cover;
+            }
+        }
+
+        .detail__information {
+            text-align: left;
+
+            .detail__information__collection__text {
+                margin-bottom: 4rem;
+                @extend %description-12;
+                text-transform: uppercase
+            }
+
+            .detail__information__title {
+                @extend %title-120;
+                max-width: 60rem;
+
+            }
+
+            .detail__information__content {
+                padding-left: 18rem;
+
+                .detail__information__highlights {
+                    margin-top: 6rem;
+
+
+                    .detail__information__highlight {
+                        &:not(:first-child) {
+                            margin-top: 4rem;
+                        }
+
+                        display: flex;
+                        align-items: center;
+
+                        .detail__information__highlight__icon {
+                            height: 4rem;
+                            width: 4rem;
+                            border: 1px solid currentColor;
+                            border-radius: 50%;
+                            margin-right: 4rem;
+                        }
+
+                        .detail__information__highlight__text {}
+                    }
+                }
+
+                .detail__information__list {
+                    margin-top: 4rem;
+
+                    .detail__information__item {
+                        display: flex;
+                        align-items: center;
+                        margin-top: 4rem;
+
+                        .detail__information__item__title {
+                            width: 10rem;
+                            @extend %description-12;
+                            padding-right: 1rem;
+                        }
+
+                        .detail__information__item__description {
+                            max-width: 44rem;
+                        }
+                    }
+                }
+
+                .detail__information__footer {
+                    margin-top: 3rem;
+
+                    .detail__information__footer__link {
+                        @extend %title-30;
+                    }
+                }
+            }
+
+        }
+    }
+}

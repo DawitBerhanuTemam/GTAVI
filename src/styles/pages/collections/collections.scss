@@ -1,0 +1,87 @@
+.collection {
+    @extend %cover;
+    background-color: $color-quicksand;
+    color: $color-quarter-spanish-white;
+
+    &__wrapper {
+        @extend %cover;
+        // overflow: hidden;
+
+        &__titles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-quarter-spanish-white;
+
+            .collection__title__label {
+                @extend %title-200;
+                text-transform: uppercase;
+                padding-top: 2rem;
+                z-index: 1;
+
+            }
+
+            .collection__titles__title {
+                text-transform: uppercase;
+                text-align: center;
+                transform: rotate(90deg);
+                @extend %description-12;
+                margin-inline: 3rem;
+            }
+        }
+
+        &__gallery {
+            @extend %cover;
+
+            &__wrapper {
+
+                @extend %center;
+
+                @extend %center-absolute;
+
+                &__link {
+                    display: inline-block;
+                    margin-inline: 5.3rem;
+
+                    &__media {
+                        position: relative;
+                        width: 44.7rem;
+                        height: 63.1rem;
+
+                        &__image {
+                            @extend %cover;
+                            object-fit: cover
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &__content {
+        @extend %cover;
+
+
+        &__article {
+            position: absolute;
+            left: 8rem;
+            bottom: 8rem;
+
+            &__title {
+                @extend %title-60;
+                text-transform: uppercase;
+
+            }
+
+            &__description {
+                @extend %description-14;
+                max-width: 46rem;
+            }
+        }
+    }
+}
